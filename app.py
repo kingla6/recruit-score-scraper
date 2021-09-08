@@ -9,6 +9,7 @@ Created on Mon Sep  6 09:23:45 2021
 import streamlit as st
 import pandas as pd
 import base64
+import requests
 from PIL import Image # import Image from pillow to open images
 from functions.data_export import *
 
@@ -22,15 +23,19 @@ st.title('MaxPreps High School Football Score and Stat Scraper')
 sidebar = st.sidebar.selectbox("Navigation", ("Main", "Application", "Instructions"))
 
 # load images that will be present in the app
-instructions_1 = Image.open("images/instructions_1.png")
-instructions_2 = Image.open("images/instructions_2.png")
-instructions_3 = Image.open("images/instructions_3.png")
-instructions_4 = Image.open("images/instructions_4.png")
+vandy = Image.open(requests.get("https://github.com/kingla6/recruit-score-scraper/raw/main/images/vandy.png", stream=True).raw)
+instructions_1 = Image.open(requests.get("https://github.com/kingla6/recruit-score-scraper/raw/main/images/instructions_1.png", stream=True).raw)
+instructions_2 = Image.open(requests.get("https://github.com/kingla6/recruit-score-scraper/raw/main/images/instructions_2.png", stream=True).raw)
+instructions_3 = Image.open(requests.get("https://github.com/kingla6/recruit-score-scraper/raw/main/images/instructions_3.png", stream=True).raw)
+instructions_4 = Image.open(requests.get("https://github.com/kingla6/recruit-score-scraper/raw/main/images/instructions_4.png", stream=True).raw)
+
 
 if sidebar == 'Main':
     
     # Header
     st.header("Main Page")
+    st.subheader("Through the navigation sidebar, the application and instructions pages can be accessed")
+    st.image(vandy)
 
 if sidebar == 'Application':
     
