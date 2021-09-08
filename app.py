@@ -17,7 +17,7 @@ from functions.data_export import *
 st.set_page_config(layout="wide")
 
 # set main title of application
-st.title('MaxPreps High School Football Score and Stat Scraper')
+st.markdown("<h1 style='text-align: center;'>MaxPreps High School Football Score and Stat Scraper</h1>", unsafe_allow_html=True)
 
 # create sidebar with multiple options
 sidebar = st.sidebar.selectbox("Navigation", ("Main", "Application", "Instructions"))
@@ -29,18 +29,22 @@ instructions_2 = Image.open(requests.get("https://github.com/kingla6/recruit-sco
 instructions_3 = Image.open(requests.get("https://github.com/kingla6/recruit-score-scraper/raw/main/images/instructions_3.png", stream=True).raw)
 instructions_4 = Image.open(requests.get("https://github.com/kingla6/recruit-score-scraper/raw/main/images/instructions_4.png", stream=True).raw)
 
-
+# code for main page
 if sidebar == 'Main':
     
-    # Header
-    st.header("Main Page")
-    st.subheader("Through the navigation sidebar, the application and instructions pages can be accessed")
-    st.image(vandy)
+    # Page Content
+    st.markdown("<h2 style='text-align: center;'>Main Page</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>Through the navigation sidebar, the application and instructions pages can be accessed.</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>For documentation, code, and all other relevant files, see the <a href='https://github.com/kingla6/recruit-score-scraper'>project repo</a>.</h3>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1,1,1]) # this allows us to center the image by selecting col2 in next line
+    col2.image(vandy, use_column_width=True)
+    st.markdown("<h4 style='text-align: center;'>Developed by Logan King, Graduate Recruiting Assistant - Vanderbilt Football</h4>", unsafe_allow_html=True)
 
+# code for application page
 if sidebar == 'Application':
     
-    # Header
-    st.header("Application Page")
+    # Page Header
+    st.markdown("<h2 style='text-align: center;'>Application Page</h2>", unsafe_allow_html=True)
     
     # allow user to upload an excel file to be scraped
     uploaded_file = st.file_uploader("Choose an XLSX file", type="xlsx")
@@ -88,25 +92,27 @@ if sidebar == 'Application':
         # if the scrape button is clicked, execute the scrape function
         if st.button('Get Scores and Stats'):
             scrape_fun()
-        
+  
+# code for instructions page
 if sidebar == 'Instructions':
     
     # Header
-    st.header("Instructions Page")
+    st.markdown("<h2 style='text-align: center;'>Instructions Page</h2>", unsafe_allow_html=True)
     
     # display instructions and images
-    st.subheader("1. Download Gametracker File")
-    st.text("Be sure to download the file as an .xlsx file as shown below:")
+    st.markdown("<h2 style='text-align: left;'>1. Download Gametracker File</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left;'>Be sure to download the file as an .xlsx file as shown below:</h3>", unsafe_allow_html=True)
     st.image(instructions_1)
-    
-    st.subheader("2. Load file into application and select desired sheet")
-    st.text("Once the sheet loads, click the button to collect scores and stats for that week. \n(This can take several minutes, so do NOT hit back or refresh in the browser)")
+
+    st.markdown("<h2 style='text-align: left;'>2. Load file into application and select desired sheet</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left;'>Once the sheet loads, click the button to collect scores and stats for that week.</h3>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: left;'><em>This can take several minutes, so do NOT hit back or refresh in the browser!</em></h4>", unsafe_allow_html=True)
     st.image(instructions_2)
     
-    st.subheader("3. Download the .csv file using the link that appears")
-    st.text("Congratulations, you've gotten all scores and stats for the players on MaxPreps this week!")
+    st.markdown("<h2 style='text-align: left;'>3. Download the .csv file using the link that appears</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left;'>Congratulations, you've gotten all scores and stats for the players on MaxPreps this week!</h3>", unsafe_allow_html=True)
     st.image(instructions_3)
     
-    st.subheader("Errors")
-    st.text("If you input a sheet without the necessary columns to collect data, the following error will appear:")
+    st.markdown("<h2 style='text-align: left;'>Errors</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left;'>If you input a sheet without the necessary columns to collect data, the following error will appear:</h3>", unsafe_allow_html=True)
     st.image(instructions_4)
