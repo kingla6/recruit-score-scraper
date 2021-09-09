@@ -20,3 +20,11 @@ Future updates include:
 
 ## Repo Files
 
+- [.streamlit](https://github.com/kingla6/recruit-score-scraper/tree/main/.streamlit): app configuration files
+- [requirements.txt](https://github.com/kingla6/recruit-score-scraper/blob/main/requirements.txt): app dependencies aside from base python packages
+- [app.py](https://github.com/kingla6/recruit-score-scraper/blob/main/app.py): python code for app
+- [images](https://github.com/kingla6/recruit-score-scraper/tree/main/images): images that are present on the app
+- [functions](https://github.com/kingla6/recruit-score-scraper/tree/main/functions): code files fro app functions
+- .ipynb files: python notebooks to support debugging of app functions
+- [test_data](https://github.com/kingla6/recruit-score-scraper/tree/main/test_data): data file to test the app
+- other python support files as needed
