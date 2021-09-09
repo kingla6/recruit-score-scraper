@@ -111,6 +111,7 @@ if sidebar == 'Instructions':
     
     st.markdown("<h2 style='text-align: left;'>3. Download the .csv file using the link that appears</h2>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: left;'>Congratulations, you've gotten all scores and stats for the players on MaxPreps this week!</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left;'>The export file can be pasted in to the Gametracker and reformatted to overwrite the current week's sheet.</h3>", unsafe_allow_html=True)
     st.image(instructions_3)
     
     st.markdown("<h2 style='text-align: left;'>Errors</h2>", unsafe_allow_html=True)
