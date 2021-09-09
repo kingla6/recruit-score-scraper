@@ -62,7 +62,7 @@ if sidebar == 'Application':
             return
         except:
             # if no file output, print error message
-            st.error('Output could not be generated for the input file. Make sure columns are present for MaxPreps Link and Game Date in the sheet of interest.')
+            st.error('Output could not be generated for the input file. Make sure columns are present and formatted correctly for MaxPreps Link and Game Date in the sheet of interest.')
     
     # download link function found at: https://discuss.streamlit.io/t/how-to-download-file-in-streamlit/1806        
     def get_table_download_link(df):
