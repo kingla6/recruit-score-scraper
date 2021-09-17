@@ -1,0 +1,33 @@
+Table,Stat,Side of Ball,New Stat,Order
+Passing,C,O,Comp,1
+Passing,Att,O,Att,2
+Passing,Yds,O,Yds,3
+Passing,TD,O,TD,4
+Passing,Int,O,Int,5
+Passing,QB Rate,O,QBR,6
+Rushing,Car,O,Rush,7
+Rushing,Yds,O,Yds,8
+Rushing,TD,O,TD,9
+Receiving,Rec,O,Rec,10
+Receiving,Yds,O,Yds,11
+Receiving,TD,O,TD,12
+Offensive Fumbles and Pancake Blocks,Fum,O,Fum,13
+Offensive Fumbles and Pancake Blocks,Pnk Blk,O,Pancake,14
+Tackles,Tot Tckls,D,Tot Tack,15
+Tackles,TFL,D,TFL,16
+Sacks,Sacks,D,Sack,17
+Sacks,Hurs,D,Hurr,18
+Defensive Statistics,Int,D,Int,19
+Defensive Statistics,PD,D,PD,20
+Defensive Statistics,Fmb Rec,D,FR,21
+Defensive Statistics,Caus,D,FF,22
+Defensive Statistics,Blk Pnts,D,Punt Blk,23
+Defensive Statistics,Blk FGs,D,Kick Blk,24
+Touchdowns,TD FR,D,FR TD,25
+Touchdowns,TD IR,D,IR TD,26
+Kickoff and Punt Returns,KO Rets,R,KR,27
+All Purpose Yards,KR,R,Yds,28
+Touchdowns,TD KOR,R,TD,29
+Kickoff and Punt Returns,P Rets,R,PR,30
+All Purpose Yards,PR,R,Yds,31
+Touchdowns,TD PR,R,TD,32
