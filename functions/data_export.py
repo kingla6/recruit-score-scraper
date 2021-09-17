@@ -26,7 +26,7 @@ def data_export(uploaded_file):
     input_part['Game Date'] = input_part['Game Date'].astype(str).apply(lambda x: datetime.datetime.strptime(x, '%Y-%m-%d').strftime('%m/%d'))
     
     #scrape stats for all players
-    input_stats = stat_scraper(input_part['MaxPreps Link'])
+    input_stats = stat_scraper_1(input_part['MaxPreps Link'])
     
     #merge stats with this week's data, dropping and renaming columns as necessary
     input_merge = pd.merge(input_part, input_stats, left_on = ['MaxPreps Link', 'Game Date'], right_on = ['Player', 'Date'], how = 'left').drop(['Player', 'Date'], axis=1).rename(columns = {'Result_x': 'Result', 'Result_y': 'Scraped_Result'}).drop(['Game Date', 'MaxPreps Link', 'Opponent'], axis = 1)
