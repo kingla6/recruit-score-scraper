@@ -12,7 +12,7 @@ import datetime
 import pandas as pd
 
 ##function
-from functions.stat_scraper import *
+from functions.stat_scraper_1 import *
 
 def data_export(uploaded_file):
     
